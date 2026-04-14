@@ -5,7 +5,7 @@ Copyright (c) 2026 Himanshu Tapde. All rights reserved.
 IMPORTANT — READ CAREFULLY
 
 This Copyright and Proprietary License Agreement ("Agreement") is a legal 
-agreement between you ("Licensee") and Himanshu ("Licensor") for the 
+agreement between you ("Licensee") and Himanshu Tapde ("Licensor") for the 
 software application known as NEXUS FIT — AI Fitness Intelligence Platform, 
 including all associated source code, documentation, assets, models, and 
 related materials (collectively, the "Software").
