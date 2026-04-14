@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "topic": "HIIT Benefits",
+    "content": "HIIT (High-Intensity Interval Training) burns 25-30% more calories than other forms of exercise. It boosts your metabolism for up to 48 hours after your workout through the afterburn effect (EPOC). HIIT improves cardiovascular health by increasing VO2 max, reduces blood pressure, and helps regulate blood sugar levels. It's time-efficient — you can get an effective workout in just 20-30 minutes."
+  },
+  {
+    "id": 2,
+    "topic": "HIIT Tips",
+    "content": "For effective HIIT: keep rest periods under 30 seconds between sets, aim for 85-90% max heart rate during work intervals, start with 20-minute sessions and build up gradually. Focus on compound movements like burpees, jump squats, mountain climbers, and high knees. Always warm up for 5 minutes before starting HIIT to prevent injury."
+  },
+  {
+    "id": 3,
+    "topic": "HIIT Mistakes",
+    "content": "Common HIIT mistakes: skipping warm-up which increases injury risk by 40%, going too hard too fast without building a base fitness level, poor form when fatigued — better to slow down than get injured, not recovering properly — allow 48 hours between HIIT sessions, and doing HIIT every day which leads to overtraining and cortisol spikes."
+  },
+  {
+    "id": 4,
+    "topic": "Running Benefits",
+    "content": "Running improves cardiovascular endurance, strengthens bones and joints by increasing bone density, reduces stress by releasing endorphins (runner's high), and burns significant calories — 400-600 per hour at moderate pace. It also improves sleep quality, boosts immune function, and increases lifespan by an average of 3 years according to studies."
+  },
+  {
+    "id": 5,
+    "topic": "Running Form",
+    "content": "Proper running form: maintain a cadence of 170-180 steps per minute, keep your feet landing under your body (not in front), lean slightly forward from the ankles, keep your arms at 90 degrees swinging forward-backward (not crossing midline), breathe rhythmically with a 3:2 inhale:exhale pattern. Replace running shoes every 400-500 km."
+  },
+  {
+    "id": 6,
+    "topic": "Running Mistakes",
+    "content": "Common running mistakes: overstriding which causes braking force and shin splints, running too fast on easy days — 80% of runs should be at conversational pace, ignoring strength training which leads to IT band issues and runner's knee, increasing mileage too quickly — follow the 10% rule (increase weekly distance by max 10%), and not hydrating properly before long runs."
+  },
+  {
+    "id": 7,
+    "topic": "Weightlifting Benefits",
+    "content": "Weightlifting builds lean muscle mass which increases your resting metabolic rate by 50-100 calories per day per kg of muscle gained. It improves bone density reducing osteoporosis risk, enhances functional strength for daily activities, improves posture, reduces back pain, and boosts confidence and mental health. It also helps regulate blood sugar and reduces type 2 diabetes risk by 30%."
+  },
+  {
+    "id": 8,
+    "topic": "Weightlifting Tips",
+    "content": "Key weightlifting tips: progressive overload is essential — increase weight by 2.5-5% weekly, focus on compound lifts (squat, deadlift, bench press, rows, overhead press), eat 1.6-2.2g protein per kg bodyweight daily, consume protein within 2 hours of training, track your lifts — what gets measured gets improved, and prioritize sleep — muscle growth happens during rest."
+  },
+  {
+    "id": 9,
+    "topic": "Weightlifting Mistakes",
+    "content": "Common weightlifting mistakes: lifting too heavy with bad form — prioritize form over weight always, neglecting warm-up sets — always do 2-3 light warm-up sets, training the same muscle group daily — allow 48-72 hours recovery per muscle group, not eating enough — muscle growth requires a calorie surplus of 250-500 calories, and ignoring legs — squats and deadlifts boost full-body growth hormones."
+  },
+  {
+    "id": 10,
+    "topic": "Yoga Benefits",
+    "content": "Yoga improves flexibility which reduces injury risk by 50%, builds core strength and balance, reduces cortisol levels by 25% leading to better stress management, improves sleep quality by 20%, enhances mind-body awareness which improves performance in other sports, and reduces chronic pain especially in the lower back and neck."
+  },
+  {
+    "id": 11,
+    "topic": "Yoga Tips",
+    "content": "Yoga tips for beginners: start with Hatha or Vinyasa flow before attempting advanced poses, focus on breath — each movement should be connected to an inhale or exhale, hold poses for 5 full breaths minimum, practice consistently — 3 times per week for noticeable improvements, use props (blocks, straps) to modify poses, and never compare yourself to others."
+  },
+  {
+    "id": 12,
+    "topic": "Cycling Benefits",
+    "content": "Cycling is low-impact making it easy on joints while building leg strength and cardiovascular endurance. It burns 400-1000 calories per hour depending on intensity. Cycling improves heart health, reduces body fat, builds quads, hamstrings, and glutes, and can be used for transportation. It also boosts mental health — outdoor cycling reduces anxiety and depression symptoms by 40%."
+  },
+  {
+    "id": 13,
+    "topic": "Swimming Benefits",
+    "content": "Swimming is a full-body, zero-impact workout that builds endurance, muscle strength, and cardiovascular fitness simultaneously. It burns 500-700 calories per hour, improves lung capacity, reduces joint pain, and is ideal for recovery days. Swimming also improves posture, reduces back pain, and enhances flexibility better than most land-based exercises."
+  },
+  {
+    "id": 14,
+    "topic": "Nutrition Basics",
+    "content": "Fundamental nutrition rules: eat 1.6-2.2g protein per kg bodyweight daily for muscle maintenance and growth, fill half your plate with vegetables, quarter with lean protein, quarter with complex carbs. Eat healthy fats (avocado, nuts, olive oil) at every meal for hormone production. Time carbs around workouts — eat complex carbs 2 hours before and simple carbs within 30 minutes after training."
+  },
+  {
+    "id": 15,
+    "topic": "Calorie Management",
+    "content": "For weight loss: create a 300-500 calorie deficit daily for sustainable 0.5kg/week loss. For muscle gain: eat 250-500 calories above maintenance. Track food intake for at least 2 weeks to understand your eating patterns. Never cut calories below 1200 (women) or 1500 (men) without medical supervision. Your calorie needs vary by 20-30% based on activity level each day."
+  },
+  {
+    "id": 16,
+    "topic": "Recovery Science",
+    "content": "Recovery is when your body adapts and gets stronger. Key principles: sleep 7-9 hours per night — growth hormone peaks during deep sleep, consume 20-40g protein within 2 hours post-workout, allow 48 hours between high-intensity sessions targeting the same muscle group, foam roll for 10 minutes daily to reduce muscle soreness by 30%, and take at least 2 full rest days per week."
+  },
+  {
+    "id": 17,
+    "topic": "Sleep and Fitness",
+    "content": "Sleep directly impacts fitness performance. Less than 6 hours reduces strength by 10-15%, impairs reaction time by 25%, increases injury risk by 60%, and raises cortisol which promotes fat storage. Optimize sleep: keep the room at 18-20°C, avoid screens 1 hour before bed, eat your last meal 2-3 hours before sleeping, and maintain a consistent sleep schedule even on weekends."
+  },
+  {
+    "id": 18,
+    "topic": "Hydration",
+    "content": "Proper hydration is critical for performance. Even 2% dehydration reduces performance by 10-20%. Drink 30-40ml per kg bodyweight daily (2-3 liters for most people). Add 500-1000ml per hour of exercise. Drink 500ml 2 hours before exercise, 200ml every 15-20 minutes during exercise, and 500ml within 30 minutes after. Monitor urine color — pale yellow means you're hydrated."
+  },
+  {
+    "id": 19,
+    "topic": "Heart Rate Zones",
+    "content": "Heart rate zones guide training intensity. Zone 1 (50-60% max HR): recovery, warm-up. Zone 2 (60-70%): fat burning, endurance base. Zone 3 (70-80%): aerobic fitness, tempo. Zone 4 (80-90%): anaerobic threshold, performance. Zone 5 (90-100%): max effort, VO2 max. Calculate max HR as 220 minus your age. Spend 80% of training in Zones 2-3 and 20% in Zones 4-5 for optimal results."
+  },
+  {
+    "id": 20,
+    "topic": "Progressive Overload",
+    "content": "Progressive overload is the single most important principle for building strength and muscle. Methods: increase weight by 2.5-5% weekly, add 1-2 reps per set, add 1 set per exercise, decrease rest time by 10-15 seconds, increase range of motion, or increase time under tension. Without progressive overload, your body has no reason to adapt and you'll plateau within 4-6 weeks."
+  },
+  {
+    "id": 21,
+    "topic": "Warm Up Importance",
+    "content": "A proper warm-up reduces injury risk by 50% and improves performance by 10-15%. Structure: 5 minutes light cardio to raise core temperature, dynamic stretching (leg swings, arm circles, hip openers), 2-3 warm-up sets at 50%, 70%, 85% of working weight. Never static stretch cold muscles — save static stretching for post-workout cool-down."
+  },
+  {
+    "id": 22,
+    "topic": "Body Temperature and Exercise",
+    "content": "Body temperature rises during exercise as a byproduct of muscle metabolism. Normal resting temperature is 36.5-37.5°C. During intense exercise it can reach 38-40°C. Higher body temperature increases calorie burn by 7% per degree above normal. If temperature exceeds 38.5°C, focus on hydration and cooling. If you feel dizzy or nauseous, stop immediately — these are signs of heat exhaustion."
+  },
+  {
+    "id": 23,
+    "topic": "Squat Form",
+    "content": "Proper squat form: feet shoulder-width apart, toes pointed out 15-30 degrees, brace your core before descending, push your hips back and down simultaneously, keep knees tracking over toes, go at least to parallel (hip crease below knee), drive through your heels, keep chest up and back straight. Common errors: knees caving inward, leaning too far forward, not hitting depth."
+  },
+  {
+    "id": 24,
+    "topic": "Deadlift Form",
+    "content": "Proper deadlift form: feet hip-width apart, bar over mid-foot, grip just outside knees, drop hips until shins touch the bar, brace core, pull the slack out of the bar, push the floor away with your legs, keep the bar close to your body the entire time, lock out by squeezing glutes. Common errors: rounding the lower back, jerking the bar off the floor, hips rising before the bar."
+  },
+  {
+    "id": 25,
+    "topic": "Bench Press Form",
+    "content": "Proper bench press form: grip slightly wider than shoulder-width, retract shoulder blades and pin them to the bench, maintain a slight arch in lower back, feet flat on the floor, lower the bar to mid-chest with control, press up in a slight arc back toward your face. Common errors: flaring elbows at 90 degrees (keep them at 45-60 degrees), bouncing the bar off the chest, lifting hips off the bench."
+  }
+]

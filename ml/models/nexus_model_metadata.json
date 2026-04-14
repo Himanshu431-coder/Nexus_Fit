@@ -1,0 +1,41 @@
+{
+  "features": [
+    "Gender_Encoded",
+    "Age",
+    "Height",
+    "Weight",
+    "Duration",
+    "Heart_Rate",
+    "Body_Temp",
+    "HR_x_Duration",
+    "HR_x_Temp",
+    "Duration_x_Temp",
+    "Weight_x_Duration",
+    "Age_x_HR",
+    "HR_per_min",
+    "BMI",
+    "Intensity",
+    "Temp_elevated",
+    "Temp_x_Intensity",
+    "Duration_sq",
+    "HR_sq",
+    "Temp_sq"
+  ],
+  "target": "Calories",
+  "n_features": 20,
+  "model_type": "XGBoost_Optimized",
+  "confidence_level": 0.94,
+  "r2_score": 0.9996733462833879,
+  "optuna_best_params": {
+    "n_estimators": 931,
+    "max_depth": 5,
+    "learning_rate": 0.06025183905675867,
+    "subsample": 0.7110621280154502,
+    "colsample_bytree": 0.8157373337089439,
+    "reg_alpha": 0.39372238668763265,
+    "reg_lambda": 0.6990146930235017,
+    "min_child_weight": 3
+  },
+  "conformal_coverage": 0.9366666666666666,
+  "avg_interval_kcal": 2.4590456120173125
+}

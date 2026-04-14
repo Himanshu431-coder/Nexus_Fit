@@ -1,0 +1,135 @@
+{
+  "total_features": 20,
+  "drifted_features": 1,
+  "drift_percentage": 5.0,
+  "dataset_drift": false,
+  "significance_level": 0.05,
+  "test_method": "Kolmogorov-Smirnov",
+  "features": [
+    {
+      "feature": "Gender_Encoded",
+      "ks_statistic": 0.0002,
+      "p_value": 1.0,
+      "drifted": false
+    },
+    {
+      "feature": "Age",
+      "ks_statistic": 0.0152,
+      "p_value": 0.6333,
+      "drifted": false
+    },
+    {
+      "feature": "Height",
+      "ks_statistic": 0.0218,
+      "p_value": 0.1998,
+      "drifted": false
+    },
+    {
+      "feature": "Weight",
+      "ks_statistic": 0.0189,
+      "p_value": 0.3525,
+      "drifted": false
+    },
+    {
+      "feature": "Duration",
+      "ks_statistic": 0.0193,
+      "p_value": 0.3268,
+      "drifted": false
+    },
+    {
+      "feature": "Heart_Rate",
+      "ks_statistic": 0.0177,
+      "p_value": 0.4371,
+      "drifted": false
+    },
+    {
+      "feature": "Body_Temp",
+      "ks_statistic": 0.0217,
+      "p_value": 0.2033,
+      "drifted": false
+    },
+    {
+      "feature": "HR_x_Duration",
+      "ks_statistic": 0.0216,
+      "p_value": 0.2105,
+      "drifted": false
+    },
+    {
+      "feature": "HR_x_Temp",
+      "ks_statistic": 0.0221,
+      "p_value": 0.1895,
+      "drifted": false
+    },
+    {
+      "feature": "Duration_x_Temp",
+      "ks_statistic": 0.0227,
+      "p_value": 0.1672,
+      "drifted": false
+    },
+    {
+      "feature": "Weight_x_Duration",
+      "ks_statistic": 0.0231,
+      "p_value": 0.1525,
+      "drifted": false
+    },
+    {
+      "feature": "Age_x_HR",
+      "ks_statistic": 0.0177,
+      "p_value": 0.4371,
+      "drifted": false
+    },
+    {
+      "feature": "HR_per_min",
+      "ks_statistic": 0.0218,
+      "p_value": 0.1998,
+      "drifted": false
+    },
+    {
+      "feature": "BMI",
+      "ks_statistic": 0.0104,
+      "p_value": 0.9545,
+      "drifted": false
+    },
+    {
+      "feature": "Intensity",
+      "ks_statistic": 0.0269,
+      "p_value": 0.0606,
+      "drifted": false
+    },
+    {
+      "feature": "Temp_elevated",
+      "ks_statistic": 0.0217,
+      "p_value": 0.2033,
+      "drifted": false
+    },
+    {
+      "feature": "Temp_x_Intensity",
+      "ks_statistic": 0.0292,
+      "p_value": 0.033,
+      "drifted": true
+    },
+    {
+      "feature": "Duration_sq",
+      "ks_statistic": 0.0193,
+      "p_value": 0.3268,
+      "drifted": false
+    },
+    {
+      "feature": "HR_sq",
+      "ks_statistic": 0.0177,
+      "p_value": 0.4371,
+      "drifted": false
+    },
+    {
+      "feature": "Temp_sq",
+      "ks_statistic": 0.0217,
+      "p_value": 0.2033,
+      "drifted": false
+    }
+  ],
+  "prediction_drift": {
+    "ks_statistic": 0.2094,
+    "p_value": 0.0,
+    "degrading": true
+  }
+}
