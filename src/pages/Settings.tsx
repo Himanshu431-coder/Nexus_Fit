@@ -3,14 +3,23 @@ import { MotionCard } from "@/components/MotionCard";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { Code2, Heart, Github, Linkedin } from "lucide-react";
+import { Code2, Heart, Github, Linkedin, LogOut } from "lucide-react";
+import { supabase } from "@/lib/supabase";
+import { useNavigate } from "react-router-dom";
 
 export default function SettingsPage() {
+  const navigate = useNavigate();
+
   const [notifications, setNotifications] = useState({
     workoutReminders: true,
     aiInsights: true,
     weeklyReport: false,
   });
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate("/auth");
+  };
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -124,8 +133,21 @@ export default function SettingsPage() {
         </p>
       </MotionCard>
 
+      {/* Logout */}
+      <MotionCard index={4}>
+        <h3 className="mb-4 text-sm font-semibold text-nexus-text-primary">Session</h3>
+        <Button
+          onClick={handleLogout}
+          variant="outline"
+          className="gap-2 border-nexus-border text-nexus-text-secondary hover:text-nexus-red hover:border-nexus-red/50"
+        >
+          <LogOut size={16} />
+          Log Out
+        </Button>
+      </MotionCard>
+
       {/* Danger */}
-      <MotionCard index={4} className="border-nexus-red/30">
+      <MotionCard index={5} className="border-nexus-red/30">
         <h3 className="mb-4 text-sm font-semibold text-nexus-red">Danger Zone</h3>
         <Button variant="outline" className="border-nexus-red text-nexus-red hover:bg-nexus-red/10">
           Delete Account

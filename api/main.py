@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from v1 import calories, health, insights, coach
+from v1 import calories, health, insights, coach, zone
 
 app = FastAPI(
     title="NEXUS FIT — AI Fitness Intelligence API",
@@ -20,6 +20,7 @@ app.include_router(health.router, prefix="/api/v1", tags=["Health"])
 app.include_router(calories.router, prefix="/api/v1", tags=["Calories"])
 app.include_router(insights.router, prefix="/api/v1", tags=["Insights"])
 app.include_router(coach.router, prefix="/api/v1", tags=["Coach"])
+app.include_router(zone.router, prefix="/api/v1", tags=["Zone"])
 
 
 @app.get("/")

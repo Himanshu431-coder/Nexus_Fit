@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { MotionCard } from "@/components/MotionCard";
-import { Bot, Send, Loader2, Zap, BookOpen, Shield } from "lucide-react";
+import { Bot, Send, Loader2, Zap, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { supabase } from "@/lib/supabase";
 
 interface Message {
   role: "ai" | "user";
@@ -15,22 +15,45 @@ interface Message {
   };
 }
 
-const starterMessages: Message[] = [
-  {
-    role: "ai",
-    text: "Hey! I'm your Nexus AI Coach, powered by RAG — I search through my fitness knowledge base to give you evidence-based advice. I can also predict your calorie burn using our ML model. Try asking me about HIIT, running, weightlifting, nutrition, recovery, or say \"how many calories will I burn?\"",
-  },
-];
+const starterMessage: Message = {
+  role: "ai",
+  text: "Hey! I'm your Nexus AI Coach, powered by RAG — I search through my fitness knowledge base to give you evidence-based advice. I can also predict your calorie burn using our ML model. Try asking me about HIIT, running, weightlifting, nutrition, recovery, or say \"how many calories will I burn?\"",
+};
 
 export default function Coach() {
-  const [messages, setMessages] = useState<Message[]>(starterMessages);
+  const [messages, setMessages] = useState<Message[]>([starterMessage]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    loadChatHistory();
+  }, []);
+
+  useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  const loadChatHistory = async () => {
+    const { data } = await supabase
+      .from("chat_history")
+      .select("message, response, sources")
+      .order("created_at", { ascending: true })
+      .limit(50);
+
+    if (data && data.length > 0) {
+      const historyMessages: Message[] = [starterMessage];
+      data.forEach((row: { message: string; response: string; sources: string[] }) => {
+        historyMessages.push({ role: "user", text: row.message });
+        historyMessages.push({
+          role: "ai",
+          text: row.response,
+          sources: row.sources || [],
+        });
+      });
+      setMessages(historyMessages);
+    }
+  };
 
   const sendMessage = async () => {
     const trimmed = input.trim();
@@ -62,6 +85,16 @@ export default function Coach() {
       };
 
       setMessages((prev) => [...prev, aiMsg]);
+
+      // Save to Supabase
+      await supabase.from("chat_history").insert({
+        user_id: (await supabase.auth.getUser()).data.user?.id,
+        message: trimmed,
+        response: data.response,
+        sources: data.sources || [],
+        intent: data.intent || null,
+        confidence: data.confidence || 0,
+      });
     } catch {
       const errMsg: Message = {
         role: "ai",
