@@ -3,6 +3,10 @@ import { Bot, Send, Loader2, Zap, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { supabase } from "@/lib/supabase";
 
+const API = import.meta.env.PROD
+  ? "https://himanshuml24-nexus-fit-api.hf.space"
+  : "http://127.0.0.1:8000";
+
 interface Message {
   role: "ai" | "user";
   text: string;
@@ -65,7 +69,7 @@ export default function Coach() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/coach/chat", {
+     const response = await fetch(`${API}/api/v1/coach/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: trimmed }),

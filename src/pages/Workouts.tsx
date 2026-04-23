@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/lib/supabase";
 
+const API = import.meta.env.PROD
+  ? "https://himanshuml24-nexus-fit-api.hf.space"
+  : "http://127.0.0.1:8000";
+
 const ratingColor: Record<string, string> = {
   Excellent: "bg-nexus-green/15 text-nexus-green border-nexus-green/30",
   Good: "bg-nexus-cyan/15 text-nexus-cyan border-nexus-cyan/30",
@@ -103,7 +107,7 @@ export default function Workouts() {
     setZoneResult(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/predict", {
+      const response = await fetch(`${API}/api/v1/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -127,7 +131,7 @@ export default function Workouts() {
 
       // Also get zone prediction
       try {
-        const zoneResponse = await fetch("http://127.0.0.1:8000/api/v1/predict-zone", {
+        const zoneResponse = await fetch(`${API}/api/v1/predict-zone`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
