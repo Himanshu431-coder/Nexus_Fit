@@ -9,17 +9,27 @@ RAG-based AI coaching, heart rate zone prediction, and real-time pose estimation
 
 <br>
 
-[![React](https://img.shields.io/badge/React-18-blue?logo=react&style=flat-square)](https://react.dev)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green?logo=fastapi&style=flat-square)](https://fastapi.tiangolo.com)
-[![XGBoost](https://img.shields.io/badge/XGBoost-Optimized-orange?logo=xgboost&style=flat-square)](https://xgboost.ai)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&style=flat-square)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&style=flat-square)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&style=flat-square)](https://vitejs.dev)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?logo=tailwindcss&style=flat-square)](https://tailwindcss.com)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&style=flat-square)](https://www.python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&style=flat-square)](https://fastapi.tiangolo.com)
+[![XGBoost](https://img.shields.io/badge/XGBoost-2.0-FF6600?logo=xgboost&style=flat-square)](https://xgboost.ai)
+[![LightGBM](https://img.shields.io/badge/LightGBM-4.0-029E73?style=flat-square)](https://lightgbm.readthedocs.io)
+[![CatBoost](https://img.shields.io/badge/CatBoost-1.2-FFBE0A?style=flat-square)](https://catboost.ai)
+[![SHAP](https://img.shields.io/badge/SHAP-0.44-9467BD?style=flat-square)](https://shap.readthedocs.io)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.5-F7931E?logo=scikit-learn&style=flat-square)](https://scikit-learn.org)
+[![MediaPipe](https://img.shields.io/badge/MediaPipe-Pose-4285F4?logo=google&style=flat-square)](https://mediapipe.dev)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?logo=postgresql&style=flat-square)](https://supabase.com)
+[![Docker](https://img.shields.io/badge/Docker-Deployed-2496ED?logo=docker&style=flat-square)](https://www.docker.com)
 [![R²](https://img.shields.io/badge/R²-0.9997-brightgreen?style=flat-square)]()
 [![Tests](https://img.shields.io/badge/Tests-20%2F20-brightgreen?style=flat-square)]()
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-blue?logo=postgresql&style=flat-square)](https://supabase.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](./LICENSE)
 
 <br>
 
-[🌐 **Live Demo**](https://nexus-fit.pages.dev) · [📖 **API Docs**](https://himanshuml24-nexus-fit-api.hf.space/docs) · [🧪 **Test Results**](./api/test_main.py)
+[🌐 **Live Demo**](https://nexus-fit.pages.dev) · [📖 **API Docs**](https://himanshuml24-nexus-fit-api.hf.space/docs) · [🧪 **Tests**](./api/test_main.py)
 
 <br>
 
@@ -37,6 +47,39 @@ RAG-based AI coaching, heart rate zone prediction, and real-time pose estimation
 | **Explainability** | SHAP Feature Attribution | Per-prediction contribution breakdown |
 | **Pose Estimation** | MediaPipe Pose · Real-time | Body tracking + joint angle analysis |
 | **Auth & Security** | Supabase JWT + Row Level Security | Per-user data isolation |
+
+---
+
+## 💡 Why This Project
+
+Most fitness apps give you a single number — "You burned 487 calories." But how confident is that number? Which factors mattered most? What zone were you in?
+
+**NEXUS FIT answers all three:**
+
+| Question | Answer |
+|:---------|:-------|
+| "How many calories?" | 487 kcal (XGBoost, R² = 0.9997) |
+| "How confident?" | 464–510 kcal range (94% conformal coverage) |
+| "Why?" | Duration 38%, Heart Rate 27%, Weight 18% (SHAP) |
+| "What zone?" | Zone 4 — Threshold (Karvonen) |
+| "Is it safe?" | ✅ Safe — 81% of max HR |
+
+No other open-source fitness project provides **prediction + uncertainty + explanation + zone classification** in one platform.
+
+---
+
+## 🏆 Key Differentiators
+
+| Feature | Other Fitness Apps | NEXUS FIT |
+|:--------|:-------------------|:----------|
+| Calorie Prediction | Single number | Number + confidence interval |
+| Explainability | None | SHAP feature contributions |
+| Uncertainty | None | Conformal prediction (94% coverage) |
+| Heart Rate Zones | Basic % | Karvonen + Tanaka (ACSM standard) |
+| AI Coach | Rule-based | RAG with 25 knowledge documents |
+| Auth Security | Basic | Row Level Security per user |
+| Testing | None | 20/20 automated tests |
+| CI/CD | None | GitHub Actions + auto deploy |
 
 ---
 
@@ -118,11 +161,7 @@ graph TB
 
 | Dashboard | Workout Prediction | AI Coach |
 |:---------:|:-----------------:|:--------:|
-| ![Dashboard](https://placehold.co/600x400/141419/06b6d4?text=Dashboard) | ![Prediction](https://placehold.co/600x400/141419/22c55e?text=Calorie+Prediction) | ![Coach](https://placehold.co/600x400/141419/8b5cf6?text=AI+Coach) |
-
-| Heart Rate Zones | Body Scan | Settings |
-|:----------------:|:---------:|:--------:|
-| ![Zones](https://placehold.co/600x400/141419/f59e0b?text=HR+Zones) | ![Pose](https://placehold.co/600x400/141419/ef4444?text=Body+Scan) | ![Settings](https://placehold.co/600x400/141419/a1a1aa?text=Settings) |
+| ![Dashboard](./assets/dashboard.png) | ![Prediction](./assets/prediction.png) | ![Coach](./assets/coach.png) |
 
 </details>
 
@@ -160,6 +199,7 @@ graph TD
 | Tracking | MLflow | Experiment versioning |
 
 **Final Metrics:**
+
 | Metric | Value |
 |:-------|:------|
 | R² | 0.9997 |
@@ -238,6 +278,11 @@ Nexus_Fit/
 │   ├── lib/                          # Supabase + utilities
 │   └── index.css                     # TailwindCSS + theme
 │
+├── assets/                           # 📸 Screenshots
+│   ├── dashboard.png
+│   ├── prediction.png
+│   └── coach.png
+│
 ├── .gitignore
 ├── LICENSE                           # MIT License
 ├── package.json
@@ -259,14 +304,15 @@ Nexus_Fit/
 
 | Category | Technologies |
 |:---------|:-------------|
-| **Frontend** | React 18 · TypeScript · Vite · TailwindCSS · Recharts · Framer Motion · MediaPipe |
-| **Backend** | FastAPI · Python 3.11 · Uvicorn · Pydantic |
-| **ML** | XGBoost · LightGBM · CatBoost · Ridge · SHAP · Conformal Prediction · Optuna · MLflow |
+| **Frontend** | React 18 · TypeScript 5 · Vite 5 · TailwindCSS 3 · Recharts · Framer Motion · MediaPipe |
+| **Backend** | FastAPI · Python 3.11 · Uvicorn · Pydantic · CORS Middleware |
+| **ML Models** | XGBoost · LightGBM · CatBoost · Ridge Regressor |
+| **ML Tools** | SHAP · Conformal Prediction · Optuna · MLflow · Scikit-Learn · NumPy · Pandas |
 | **RAG** | TF-IDF · Cosine Similarity · 25 Fitness Knowledge Documents |
-| **Database** | PostgreSQL (Supabase) · Row Level Security |
-| **Auth** | JWT · Supabase Auth |
-| **Testing** | pytest · httpx · 20/20 tests |
-| **CI/CD** | GitHub Actions · Cloudflare Pages · HuggingFace Spaces |
+| **Database** | PostgreSQL (Supabase) · Row Level Security · Foreign Keys |
+| **Auth** | JWT · Supabase Auth · Protected Routes · Session Management |
+| **Testing** | pytest · httpx · 20/20 Automated Tests |
+| **CI/CD** | GitHub Actions · Cloudflare Pages · HuggingFace Spaces · Docker |
 | **Monitoring** | Data Drift Detection · Model Comparison · EDA Reports |
 
 </details>
@@ -356,14 +402,32 @@ API Docs: http://localhost:8000/docs
 
 ---
 
+## 🗺️ Roadmap
+
+- [x] ML Calorie Prediction (XGBoost ensemble)
+- [x] Conformal Prediction Intervals
+- [x] SHAP Explainability
+- [x] RAG AI Coach
+- [x] Heart Rate Zone Prediction
+- [x] MediaPipe Pose Estimation
+- [x] Supabase Auth + RLS
+- [x] CI/CD Pipeline
+- [x] Production Deployment
+- [ ] Progress tracking over time
+- [ ] Workout plan generation
+- [ ] Mobile responsive improvements
+- [ ] Multi-language support
+
+---
+
 ## 👤 Author
 
 <div align="left">
 
 **Himanshu** — AI/ML & Data Engineering
 
-[![GitHub](https://img.shields.io/badge/GitHub-Himanshu431--coder-black?style=flat-square&logo=github)](https://github.com/Himanshu431-coder)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-HimanshuML24-yellow?style=flat-square&logo=huggingface)](https://huggingface.co/HimanshuML24)
+[![GitHub](https://img.shields.io/badge/GitHub-Himanshu431--coder-181717?style=flat-square&logo=github)](https://github.com/Himanshu431-coder)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-HimanshuML24-FFD21E?style=flat-square&logo=huggingface)](https://huggingface.co/HimanshuML24)
 
 </div>
 
